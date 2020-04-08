@@ -14,6 +14,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class JonasTestletApplication {
     private static ExecutorService service = Executors.newFixedThreadPool(10);
 
+    /***
+     *
+     * @param testPack, the package which testing code should be in
+     * @param concurrencyCount, to show how many the testing code will be executed (multiple threading)
+     */
     public static void run(String testPack, int concurrencyCount) {
 
         Set<Class<? extends JonasTestlet>> allClasses = scanTestPackage(testPack);
@@ -25,8 +30,6 @@ public class JonasTestletApplication {
                     runParallel(m, tClz, concurrencyCount);
                 }
             });
-
-
         });
 
         service.shutdown();
