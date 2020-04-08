@@ -11,6 +11,6 @@
 ![Image of Sample of the Execution Result](http://www.baijuyi.me/upload/2020/4/WechatIMG12-d5d8526bf6d24a0596cf47ef5ab26876.png)
 
 ## To do next
-* To implement configuration module
+* To implement the configuration module
 * To optimize the multiple threading 
 * To optimize the format of the report
